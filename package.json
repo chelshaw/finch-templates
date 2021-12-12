@@ -1,15 +1,17 @@
 {
   "name": "finch-templates",
   "version": "1.0.0",
+  "private": true,
   "description": "Templates for Finch website",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "style": "tailwindcss -i ./styles/input.css -o ./styles/output.css --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Chelsea Shaw <chelshaw.dev+finch@gmail.com>",
   "devDependencies": {
-    "tailwindcss": "^3.0.0"
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^3.0.1"
   }
 }
