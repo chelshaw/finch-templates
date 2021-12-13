@@ -42,7 +42,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
 }
 
@@ -423,9 +423,49 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.border-t-2 {
+.border, .border-t-2 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  font-family: "Playfair Display", "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 3.3333333em;
+  line-height: 0.9812;
+}
+
+h2 {
+  font-family: "Playfair Display", "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2.3888889em;
+  line-height: 1.0296;
+}
+
+h3 {
+  font-family: "Playfair Display", "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 2.2222222em;
+  line-height: 1.0296;
+}
+
+a:hover,
+  button:hover,
+  input[type='submit']:hover {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .static {
@@ -434,6 +474,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .absolute {
   position: absolute;
+}
+
+.relative {
+  position: relative;
 }
 
 .inset-x-0 {
@@ -445,21 +489,90 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 0px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.col-span-7 {
+  grid-column: span 7 / span 7;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
 
+.max-h-\[600\] {
+  max-height: 600;
+}
+
+.min-h-\[650\] {
+  min-height: 650;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .max-w-page {
   max-width: 1440px;
+}
+
+.max-w-\[80\%\] {
+  max-width: 80%;
+}
+
+@-webkit-keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  -webkit-animation: spin 18s linear infinite;
+          animation: spin 18s linear infinite;
 }
 
 .flex-wrap {
@@ -472,6 +585,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-t-2 {
@@ -538,6 +663,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(48 155 97 / var(--tw-bg-opacity));
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -548,7 +682,32 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
+.py-lg {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.px-xs {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-sm {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
 .py-sm {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
@@ -568,6 +727,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
+.pb-sm {
+  padding-bottom: 1rem;
+}
+
 .pt-first {
   padding-top: 7rem;
 }
@@ -576,12 +743,48 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
 }
 
-.font-sans {
-  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.font-serif {
+  font-family: "EB Garamond", Cambria, "Times New Roman", Times, serif;
 }
 
-.font-serif {
-  font-family: Georgia, Cambria, Times New Roman, Times, serif;
+.font-display {
+  font-family: Poppins, sans-serif;
+}
+
+.font-heading {
+  font-family: "Playfair Display", "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-xl {
+  font-size: 2.3888889em;
+  line-height: 1.0296;
+}
+
+.text-md {
+  font-size: 1.3333333em;
+  line-height: 1.4;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.text-finch-grey {
+  --tw-text-opacity: 1;
+  color: rgb(241 243 243 / var(--tw-text-opacity));
+}
+
+.text-finch-azure {
+  --tw-text-opacity: 1;
+  color: rgb(7 0 214 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -606,4 +809,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:px-lg {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }

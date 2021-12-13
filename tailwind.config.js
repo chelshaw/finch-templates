@@ -12,6 +12,12 @@ module.exports = {
   content: ['./src/**/*.{html,js}', './index.html'], // remove index for prod
 
   theme: {
+    fontSize: {
+      xxl: [em(60, 18), 0.9812], // h1 (wise guide heading)
+      xl: [em(43, 18), 1.0296], // h2
+      lg: [em(40, 18), 1.0296], // h3
+      md: [em(24, 18), 1.4], // intro
+    },
     // spacing: {
     //   '1': '1rem',
     //   '2': '2rem',
@@ -21,35 +27,49 @@ module.exports = {
     //   '6': '6rem',
     // },
     maxWidth: { page: '1440px' },
-    container: {
-      center: true,
-      // fontFamily: {
-      //   sans: [
-      //     'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-      //   ],
-      //   heading: [
-      //     '"EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-      //   ],
-      // },
-    },
+    // container: {
+    // center: true,
+    // fontFamily: {
+    //   sans: [
+    //     'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+    //   ],
+    //   heading: [
+    //     '"EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+    //   ],
+    // },
+    // },
     fontFamily: {
       sans: [
-        'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+        // 'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+        'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
       ],
-      heading: [
-        'EB Garamond',
-        'Georgia',
+      serif: [
+        '"EB Garamond"',
+        // 'Playfair Display',
         'Cambria',
-        'Times New Roman',
+        '"Times New Roman"',
         'Times',
         'serif',
       ],
-      serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
     },
     extend: {
+      animation: { 'spin-slow': 'spin 18s linear infinite' },
+      fontFamily: {
+        display: ['Poppins', 'sans-serif'],
+        heading: [
+          '"Playfair Display"',
+          '"EB Garamond"',
+          'Georgia',
+          'Cambria',
+          '"Times New Roman"',
+          'Times',
+          'serif',
+        ],
+      },
       padding: {
-        sm: '2rem',
-        md: '4rem',
+        xs: '0.5rem',
+        sm: '1rem',
+        md: '3rem',
         lg: '6rem',
         xl: '10rem',
         '2xl': '16rem',
@@ -69,6 +89,7 @@ module.exports = {
         'finch-meadow': '#5ba44b',
         'finch-turf': '#309b61',
       },
+      /* Used in typography plugin
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -128,7 +149,7 @@ module.exports = {
             },
           },
         },
-      }),
+      }),*/
     },
   },
 
