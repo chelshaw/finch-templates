@@ -456,6 +456,11 @@ a:hover,
   cursor: pointer;
 }
 
+img {
+  /* Styling for alt tag if image broken */
+  font-family: Poppins, sans-serif;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -528,18 +533,6 @@ a:hover,
   margin-bottom: 1.25rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-20 {
-  margin-bottom: 5rem;
-}
-
 .block {
   display: block;
 }
@@ -572,6 +565,10 @@ a:hover,
   width: 100%;
 }
 
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .max-w-page {
   max-width: 1440px;
 }
@@ -584,10 +581,6 @@ a:hover,
   max-width: 100%;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
-}
-
 .max-w-6xl {
   max-width: 72rem;
 }
@@ -596,12 +589,24 @@ a:hover,
   flex-basis: 33.333333%;
 }
 
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -694,12 +699,22 @@ a:hover,
   background-color: rgb(0 59 43 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
+.bg-finch-sand {
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 218 186 / var(--tw-bg-opacity));
+}
+
+.bg-rose-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 113 133 / var(--tw-bg-opacity));
 }
 
 .p-sm {
   padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .px-7 {
@@ -720,6 +735,11 @@ a:hover,
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.py-md {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-lg {
@@ -757,11 +777,6 @@ a:hover,
   padding-right: 1rem;
 }
 
-.py-md {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -774,16 +789,12 @@ a:hover,
   padding-top: 7rem;
 }
 
-.pb-md {
-  padding-bottom: 3rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
 .pb-lg {
   padding-bottom: 6rem;
+}
+
+.pb-md {
+  padding-bottom: 3rem;
 }
 
 .text-center {
@@ -811,14 +822,14 @@ a:hover,
   line-height: 1.4;
 }
 
-.text-xl {
-  font-size: 2.3888889em;
-  line-height: 1.0296;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 2.3888889em;
+  line-height: 1.0296;
 }
 
 .text-xs {
@@ -834,9 +845,18 @@ a:hover,
   letter-spacing: 0.05em;
 }
 
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
 .text-finch-red {
   --tw-text-opacity: 1;
   color: rgb(255 0 0 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-finch-grey {
@@ -847,11 +867,6 @@ a:hover,
 .text-finch-azure {
   --tw-text-opacity: 1;
   color: rgb(7 0 214 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-finch-forest {
@@ -868,7 +883,7 @@ a:hover,
   display: block;
   width: 150px;
   height: 50px;
-  background: url('../../assets/finch-logo.png');
+  background: url('../../assets/logos/finch-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -908,6 +923,10 @@ a:hover,
 @media (min-width: 768px) {
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:flex-nowrap {
+    flex-wrap: nowrap;
   }
 
   .md\:px-lg {

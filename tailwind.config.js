@@ -89,6 +89,7 @@ module.exports = {
         'finch-meadow': '#5ba44b',
         'finch-turf': '#309b61',
         'finch-forest': '#003b2b',
+        'finch-sand': '#f1daba',
       },
       fontSize: {
         xxl: [em(60, 18), 0.9812], // h1 (wise guide heading)
