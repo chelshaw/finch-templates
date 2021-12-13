@@ -9,7 +9,8 @@ const em = (px, base) => `${round(px / base)}em`
 
 module.exports = {
   // For templates only
-  content: ['./src/*.{html,js}'],
+  // content: ['./src/*.{html}'],
+  content: ['./src/**/*.{html,js}'], // from install tut
 
   theme: {
     container: {
@@ -21,8 +22,6 @@ module.exports = {
         xl: '5rem',
         '2xl': '6rem',
       },
-    },
-    extend: {
       fontFamily: {
         sans: [
           'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -31,6 +30,8 @@ module.exports = {
           '"EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
         ],
       },
+    },
+    extend: {
       colors: {
         'finch-green': '#1F9869',
         'finch-yellow': '#F3C100',
