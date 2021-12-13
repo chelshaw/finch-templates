@@ -1,13 +1,14 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1" />
     <!-- STYLING (COMPILED) -->
-    <link href="./styles/output.css?cache=2" rel="stylesheet" />
+    <link href="./styles/output.css" rel="stylesheet" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Poppins:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Poppins:wght@700&family=Playfair+Display:wght@500&display=swap"
       rel="stylesheet"
     />
     <script
@@ -15,62 +16,60 @@
       src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"
     ></script>
   </head>
-  <body>
+  <body class="static font-serif">
     <!-- BEGIN SECTION -->
-    <div
-      x-data="{ isOpen: false }"
-      class="flex justify-between p-4 bg-peach lg:p-8"
-    >
-      <div class="flex items-center bg-finch-peach">
-        <h3 class="text-2xl font-serif font-bold text-white">Finch</h3>
-      </div>
-
-      <!-- left header section -->
-      <div class="flex items-center justify-between">
-        <button @click="isOpen = !isOpen" type="submit">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6 text-white lg:hidden"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-        <div class="hidden space-x-6 lg:inline-block font-serif">
-          <a href="#" class="text-base text-white">Menu1</a>
-          <a href="#" class="text-base text-white">Menu2</a>
-          <a href="#" class="text-base text-white">Menu3</a>
-          <a href="#" class="text-base text-white">Menu3</a>
-        </div>
-
-        <!-- mobile navbar -->
-        <div class="mobile-navbar">
-          <!-- navbar wrapper -->
-          <div
-            class="fixed left-0 w-full h-48 p-5 bg-white rounded-lg shadow-xl top-16"
-            x-show="isOpen"
-            @click.away=" isOpen = false"
-          >
-            <div class="flex flex-col space-y-6">
-              <a href="#" class="text-sm text-black">Menu1</a>
-              <a href="#" class="text-sm text-black">Menu2</a>
-              <a href="#" class="text-sm text-black">Menu3</a>
-              <a href="#" class="text-sm text-black">Menu3</a>
+    <section class="bg-finch-peach">
+      <div class="max-w-page py-lg px-xs md:px-lg">
+        <div class="grid md:grid-cols-12 gap-8">
+          <div class="col-span-7">
+            <!-- rotation-div-main -->
+            <div class="relative mx-auto min-h-[650] max-w-[80%]">
+              <!-- rotation-holder -->
+              <div class="absolute inline">
+                <span class="sr-only">Real science, real reviews</span>
+                <img
+                  src="../assets/hero-text.png"
+                  class="animate-spin-slow absolute max-w-full z-10"
+                  alt="Illustration of two stylish humans with arms over each other, holding cleaning products"
+                />
+                <img
+                  src="../assets/hero-image.png"
+                  class="max-h-[600] mt-10 text-center mx-auto text-finch-grey font-display"
+                  alt="Illustration of two stylish humans with arms over each other, holding cleaning products"
+                />
+              </div>
             </div>
           </div>
+          <div class="col-span-5 px-sm">
+            <h3 class="text-finch-azure font-heading text-xl pb-5">
+              Product insights based on science
+            </h3>
+            <p class="text-white text-md pb-sm">
+              Finch is a tool that educates people on the ins and outs of
+              sustainability by turning complex scientific facts into simple,
+              actionable insights.
+            </p>
+            <p class="text-white text-md pb-sm">
+              Get the intel you need to make informed choices — straight to your
+              inbox.
+            </p>
+            <!-- TODO: Hook up form -->
+            <form>
+              <label for="email" class="block text-white font-sans mb-2">
+                Email *
+              </label>
+              <!-- TODO: focus/active border on input -->
+              <input type="email" id="email" class="block w-full p-2 mb-5" />
+              <input
+                type="submit"
+                value="Subscribe"
+                class="rounded-lg px-7 py-sm bg-finch-blue hover:opacity-75 text-white font-display uppercase tracking-wide"
+              />
+            </form>
+          </div>
         </div>
-        <!-- end mobile navbar -->
       </div>
-      <!-- right header section -->
-    </div>
-
+    </section>
     <!-- END SECTION -->
   </body>
 </html>
