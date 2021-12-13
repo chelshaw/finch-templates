@@ -1,4 +1,23 @@
 @tailwind base;
+@layer base {
+  html {
+    font-size: 18px;
+  }
+  h1 {
+    @apply text-xxl font-heading;
+  }
+  h2 {
+    @apply text-xl font-heading;
+  }
+  h3 {
+    @apply text-lg font-heading;
+  }
+  a:hover,
+  button:hover,
+  input[type='submit']:hover {
+    cursor: pointer;
+  }
+}
 @tailwind components;
 @tailwind utilities;
 
