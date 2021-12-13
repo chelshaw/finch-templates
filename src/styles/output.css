@@ -837,6 +837,11 @@ img {
   line-height: 1rem;
 }
 
+.text-xxl {
+  font-size: 3.3333333em;
+  line-height: 0.9812;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
