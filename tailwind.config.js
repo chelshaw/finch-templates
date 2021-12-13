@@ -9,29 +9,52 @@ const em = (px, base) => `${round(px / base)}em`
 
 module.exports = {
   // For templates only
-  // content: ['./src/*.{html}'],
-  content: ['./src/**/*.{html,js}'], // from install tut
+  content: ['./src/**/*.{html,js}', './index.html'], // remove index for prod
 
   theme: {
+    // spacing: {
+    //   '1': '1rem',
+    //   '2': '2rem',
+    //   '3': '3rem',
+    //   '4': '4rem',
+    //   '5': '5rem',
+    //   '6': '6rem',
+    // },
+    maxWidth: { page: '1440px' },
     container: {
       center: true,
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
-      },
-      fontFamily: {
-        sans: [
-          'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-        ],
-        heading: [
-          '"EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-        ],
-      },
+      // fontFamily: {
+      //   sans: [
+      //     'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      //   ],
+      //   heading: [
+      //     '"EB Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+      //   ],
+      // },
+    },
+    fontFamily: {
+      sans: [
+        'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      ],
+      heading: [
+        'EB Garamond',
+        'Georgia',
+        'Cambria',
+        'Times New Roman',
+        'Times',
+        'serif',
+      ],
+      serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
     },
     extend: {
+      padding: {
+        sm: '2rem',
+        md: '4rem',
+        lg: '6rem',
+        xl: '10rem',
+        '2xl': '16rem',
+        first: '7rem', // ~114px for navbar height
+      },
       colors: {
         'finch-green': '#1F9869',
         'finch-yellow': '#F3C100',
@@ -39,8 +62,8 @@ module.exports = {
         'finch-blue': '#77C6D8',
         'finch-grey': '#F1F3F3',
         'finch-silver': '#C0C0C0',
-        'finch-azure': '#91DFED',
-        'finch-peach': '#FF775C',
+        'finch-azure': '#0700d6', //'#91DFED',
+        'finch-peach': '#ec7d60', //'#FF775C',
         'finch-slate': '#7e7f7f',
         'finch-lemongrass': '#a1b128',
         'finch-meadow': '#5ba44b',
@@ -49,6 +72,9 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            body: {
+              fontFamily: theme('fontFamily.serif'),
+            },
             color: theme('colors.gray.800'),
             a: {
               color: theme('colors.finch-peach'),
@@ -112,6 +138,5 @@ module.exports = {
     },
   },
 
-  // plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
   plugins: [],
 }
