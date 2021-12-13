@@ -12,12 +12,6 @@ module.exports = {
   content: ['./src/**/*.{html,js}', './index.html'], // remove index for prod
 
   theme: {
-    fontSize: {
-      xxl: [em(60, 18), 0.9812], // h1 (wise guide heading)
-      xl: [em(43, 18), 1.0296], // h2
-      lg: [em(40, 18), 1.0296], // h3
-      md: [em(24, 18), 1.4], // intro
-    },
     // spacing: {
     //   '1': '1rem',
     //   '2': '2rem',
@@ -26,7 +20,6 @@ module.exports = {
     //   '5': '5rem',
     //   '6': '6rem',
     // },
-    maxWidth: { page: '1440px' },
     // container: {
     // center: true,
     // fontFamily: {
@@ -39,10 +32,12 @@ module.exports = {
     // },
     // },
     fontFamily: {
+      // Original: Sofia Pro
       sans: [
         // 'Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
         'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
       ],
+      // Original: Adobe Garamond Pro
       serif: [
         '"EB Garamond"',
         // 'Playfair Display',
@@ -53,10 +48,15 @@ module.exports = {
       ],
     },
     extend: {
+      maxWidth: { page: '1440px' },
       animation: { 'spin-slow': 'spin 18s linear infinite' },
       fontFamily: {
-        display: ['Poppins', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'], // Original: Sofia Pro @ 800/900
         heading: [
+          // Original: Albra
+          // 'Rufina',
+          // '"PT Serif"',
+          // '"DM Serif Display"',
           '"Playfair Display"',
           '"EB Garamond"',
           'Georgia',
@@ -88,6 +88,13 @@ module.exports = {
         'finch-lemongrass': '#a1b128',
         'finch-meadow': '#5ba44b',
         'finch-turf': '#309b61',
+        'finch-forest': '#003b2b',
+      },
+      fontSize: {
+        xxl: [em(60, 18), 0.9812], // h1 (wise guide heading)
+        xl: [em(43, 18), 1.0296], // h2
+        lg: [em(40, 18), 1.0296], // h3
+        md: [em(24, 18), 1.4], // intro
       },
       /* Used in typography plugin
       typography: (theme) => ({
