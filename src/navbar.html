@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1" />
     <!-- STYLING (COMPILED) -->
     <link href="./styles/output.css" rel="stylesheet" />
     <!-- FONTS -->
@@ -15,9 +16,9 @@
       src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"
     ></script>
   </head>
-  <body class="static">
+  <body class="static font-serif">
     <!-- BEGIN SECTION -->
-    <header class="py-sm px-lg absolute inset-x-0 top-0">
+    <header class="py-8 px-lg absolute inset-x-0 top-0">
       <div class="flex justify-between max-w-page mx-auto text-white">
         <h1 id="finch-logo">
           <a href="/">
@@ -46,10 +47,6 @@
             href: '/blog',
             title: 'Blog',
             },
-            {
-            href: '/search',
-            title: 'Search',
-            },
             ]}"
           >
             <!-- TODO: Dropdown for Wise Guides -->
@@ -59,6 +56,9 @@
                 <a x-bind:href="link.href" x-text="link.title"></a>
               </li>
             </template>
+            <li class="px-3">
+              <a href="/search" aria-valuetext="Search">🔎</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -66,12 +66,12 @@
 
     <div class="bg-finch-azure pt-first">
       <div class="py-2xl px-4 border-t-2 text-white text-center font-serif">
-        <h3 class="font-sans">
+        <h3>
           Background of the header is determined by the next section background.
         </h3>
-        <ul>
+        <ul class="font-sans">
           <li>&lt;body&gt; needs class="static" globally</li>
-          <li>and first section should have class="pt-first"</li>
+          <li>first section on the page should have class="pt-first"</li>
         </ul>
       </div>
     </div>
