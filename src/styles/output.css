@@ -506,8 +506,8 @@ a:hover,
   margin-right: auto;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .mb-2 {
@@ -556,23 +556,6 @@ a:hover,
 
 .max-w-\[80\%\] {
   max-width: 80%;
-}
-
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-spin-slow {
-  -webkit-animation: spin 18s linear infinite;
-          animation: spin 18s linear infinite;
 }
 
 .flex-wrap {
@@ -813,6 +796,24 @@ a:hover,
 
 .hover\:opacity-75:hover {
   opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @-webkit-keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .motion-safe\:animate-spin-slow {
+    -webkit-animation: spin 18s linear infinite;
+            animation: spin 18s linear infinite;
+  }
 }
 
 @media (min-width: 768px) {
