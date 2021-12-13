@@ -48,6 +48,9 @@ module.exports = {
       ],
     },
     extend: {
+      backgroundImage: {
+        'section-pattern': 'url("/assets/section-pattern.png")',
+      },
       maxWidth: { page: '1440px' },
       animation: { 'spin-slow': 'spin 18s linear infinite' },
       fontFamily: {
