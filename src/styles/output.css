@@ -593,45 +593,20 @@ img {
   flex-basis: 33.333333%;
 }
 
-.basis-2\/5 {
-  flex-basis: 40%;
-}
-
-.basis-3\/5 {
-  flex-basis: 60%;
-}
-
 .basis-1\/4 {
   flex-basis: 25%;
 }
 
-@-webkit-keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-.animate-scroll {
-  -webkit-animation: scroll 15s linear infinite;
-          animation: scroll 15s linear infinite;
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .flex-wrap {
@@ -808,6 +783,11 @@ img {
   padding-bottom: 6rem;
 }
 
+.px-md {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-xs {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -843,11 +823,6 @@ img {
   padding-right: 2.5rem;
 }
 
-.px-md {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -874,6 +849,10 @@ img {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .font-serif {
@@ -920,6 +899,11 @@ img {
 .text-xxl {
   font-size: 3.3333333em;
   line-height: 0.9812;
+}
+
+.text-p {
+  font-size: 1.1111111em;
+  line-height: 1.4;
 }
 
 .uppercase {
@@ -997,22 +981,6 @@ img {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  @-webkit-keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .motion-safe\:animate-spin-slow {
-    -webkit-animation: spin 18s linear infinite;
-            animation: spin 18s linear infinite;
-  }
-
   @-webkit-keyframes scroll {
     0% {
       transform: translateX(100%);
@@ -1022,7 +990,6 @@ img {
       transform: translateX(-100%);
     }
   }
-
   @keyframes scroll {
     0% {
       transform: translateX(100%);
@@ -1037,6 +1004,23 @@ img {
     -webkit-animation: scroll 15s linear infinite;
             animation: scroll 15s linear infinite;
   }
+
+  @-webkit-keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .motion-safe\:animate-spin-slow {
+    -webkit-animation: spin 18s linear infinite;
+            animation: spin 18s linear infinite;
+  }
 }
 
 @media (min-width: 640px) {
@@ -1046,14 +1030,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  .md\:basis-1\/3 {
-    flex-basis: 33.333333%;
-  }
-
-  .md\:basis-1\/4 {
-    flex-basis: 25%;
-  }
-
   .md\:basis-2\/5 {
     flex-basis: 40%;
   }
@@ -1062,22 +1038,34 @@ img {
     flex-basis: 60%;
   }
 
+  .md\:basis-1\/3 {
+    flex-basis: 33.333333%;
+  }
+
+  .md\:basis-1\/4 {
+    flex-basis: 25%;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-nowrap {
     flex-wrap: nowrap;
   }
 
-  .md\:px-md {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
   .md\:px-lg {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+
+  .md\:px-md {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .md\:px-0 {

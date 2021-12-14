@@ -105,6 +105,7 @@ module.exports = {
         xl: [em(43, BASE), 1.0296], // h2
         lg: [em(40, BASE), 1.0296], // h3
         md: [em(24, BASE), 1.4], // intro
+        p: [em(20, BASE), 1.4], // intro
       },
       /* Used in typography plugin
       typography: (theme) => ({
