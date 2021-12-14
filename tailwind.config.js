@@ -1,5 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-
+const BASE = 18
 const round = (num) =>
   num
     .toFixed(7)
@@ -52,14 +52,20 @@ module.exports = {
         'section-pattern': 'url("/assets/section-pattern.png")',
       },
       maxWidth: { page: '1440px' },
-      animation: { 'spin-slow': 'spin 18s linear infinite' },
+      animation: {
+        'spin-slow': 'spin 18s linear infinite',
+        scroll: 'scroll 15s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
       fontFamily: {
         display: ['Poppins', 'sans-serif'], // Original: Sofia Pro @ 800/900
         heading: [
           // Original: Albra
-          // 'Rufina',
-          // '"PT Serif"',
-          // '"DM Serif Display"',
           '"Playfair Display"',
           '"EB Garamond"',
           'Georgia',
@@ -95,10 +101,10 @@ module.exports = {
         'finch-sand': '#f1daba',
       },
       fontSize: {
-        xxl: [em(60, 18), 0.9812], // h1 (wise guide heading)
-        xl: [em(43, 18), 1.0296], // h2
-        lg: [em(40, 18), 1.0296], // h3
-        md: [em(24, 18), 1.4], // intro
+        xxl: [em(60, BASE), 0.9812], // h1 (wise guide heading)
+        xl: [em(43, BASE), 1.0296], // h2
+        lg: [em(40, BASE), 1.0296], // h3
+        md: [em(24, BASE), 1.4], // intro
       },
       /* Used in typography plugin
       typography: (theme) => ({

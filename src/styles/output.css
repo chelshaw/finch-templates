@@ -521,16 +521,16 @@ img {
   margin-bottom: 3.5rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .block {
@@ -569,6 +569,10 @@ img {
   max-width: 56rem;
 }
 
+.max-w-5xl {
+  max-width: 64rem;
+}
+
 .max-w-page {
   max-width: 1440px;
 }
@@ -589,8 +593,41 @@ img {
   flex-basis: 33.333333%;
 }
 
+.basis-2\/5 {
+  flex-basis: 40%;
+}
+
+.basis-3\/5 {
+  flex-basis: 60%;
+}
+
 .basis-1\/4 {
   flex-basis: 25%;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  -webkit-animation: scroll 15s linear infinite;
+          animation: scroll 15s linear infinite;
 }
 
 .flex-row {
@@ -619,6 +656,14 @@ img {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .rounded-lg {
@@ -793,19 +838,14 @@ img {
   padding-right: 1rem;
 }
 
-.py-xl {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.px-md {
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .pb-5 {
@@ -814,6 +854,10 @@ img {
 
 .pb-sm {
   padding-bottom: 1rem;
+}
+
+.pr-md {
+  padding-right: 3rem;
 }
 
 .pt-first {
@@ -840,12 +884,12 @@ img {
   font-family: Poppins, sans-serif;
 }
 
-.font-heading {
-  font-family: "Playfair Display", "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-heading {
+  font-family: "Playfair Display", "EB Garamond", Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-md {
@@ -868,14 +912,14 @@ img {
   line-height: 1rem;
 }
 
-.text-xxl {
-  font-size: 3.3333333em;
-  line-height: 0.9812;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xxl {
+  font-size: 3.3333333em;
+  line-height: 0.9812;
 }
 
 .uppercase {
@@ -900,14 +944,19 @@ img {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-finch-grey {
-  --tw-text-opacity: 1;
-  color: rgb(241 243 243 / var(--tw-text-opacity));
-}
-
 .text-finch-azure {
   --tw-text-opacity: 1;
   color: rgb(7 0 214 / var(--tw-text-opacity));
+}
+
+.text-finch-green {
+  --tw-text-opacity: 1;
+  color: rgb(31 152 105 / var(--tw-text-opacity));
+}
+
+.text-finch-grey {
+  --tw-text-opacity: 1;
+  color: rgb(241 243 243 / var(--tw-text-opacity));
 }
 
 .text-finch-forest {
@@ -918,6 +967,10 @@ img {
 .text-finch-blue {
   --tw-text-opacity: 1;
   color: rgb(119 198 216 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 #finch-logo {
@@ -959,16 +1012,36 @@ img {
     -webkit-animation: spin 18s linear infinite;
             animation: spin 18s linear infinite;
   }
+
+  @-webkit-keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .motion-safe\:animate-scroll {
+    -webkit-animation: scroll 15s linear infinite;
+            animation: scroll 15s linear infinite;
+  }
 }
 
 @media (min-width: 640px) {
   .sm\:basis-1\/2 {
     flex-basis: 50%;
-  }
-
-  .sm\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 }
 
@@ -981,6 +1054,14 @@ img {
     flex-basis: 25%;
   }
 
+  .md\:basis-2\/5 {
+    flex-basis: 40%;
+  }
+
+  .md\:basis-3\/5 {
+    flex-basis: 60%;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -989,36 +1070,23 @@ img {
     flex-wrap: nowrap;
   }
 
+  .md\:px-md {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .md\:px-lg {
     padding-left: 6rem;
     padding-right: 6rem;
-  }
-
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
   }
-
-  .md\:px-md {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:basis-1\/3 {
-    flex-basis: 33.333333%;
-  }
-
-  .lg\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
   .lg\:px-lg {
     padding-left: 6rem;
     padding-right: 6rem;
