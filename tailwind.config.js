@@ -50,6 +50,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'section-pattern': 'url("/assets/section-pattern.png")',
+        'faq-section': 'url("/assets/faq-pattern-finch.png")',
       },
       maxWidth: { page: '1440px' },
       animation: {
