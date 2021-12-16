@@ -32,7 +32,7 @@
   display: block;
   width: 150px;
   height: 50px;
-  background: url('../../assets/logos/finch-logo.png');
+  background: url('/assets/logos/finch-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
 }

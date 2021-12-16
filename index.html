@@ -3,7 +3,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="initial-scale=1" />
     <!-- STYLING (COMPILED) -->
-    <link href="./src/styles/output.css" rel="stylesheet" />
+    <link href="/src/styles/output.css" rel="stylesheet" />
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,32 +17,49 @@
     ></script>
   </head>
   <body class="static font-serif">
-    <!-- BEGIN SECTION -->
-
-    <h1 class="font-display text-md text-finch-red">Templates</h1>
-    <nav role="navigation">
-      <ul>
-        <li><a href="src/navbar">Navbar</a></li>
-        <li><a href="src/footer">Footer</a></li>
-        <p class="font-display text-finch-red underline text-sm">
-          Homepage Sections
-        </p>
-        <li><a href="src/home-splash">Home Splash</a></li>
-        <li><a href="src/read-the-latest">Read the latest</a></li>
-        <li><a href="src/support-logos">Support Logos</a></li>
-        <li><a href="src/as-seen-in">As Seen In</a></li>
-        <li><a href="src/wise-guides">Wise Guides</a></li>
-        <li><a href="src/science-backed">Science Backed</a></li>
-        <li><a href="src/choose-wisely">Choose Wisely</a></li>
-        <li><a href="src/how-we-rate">How we rate</a></li>
-        <li><a href="src/feedback">Feedback</a></li>
-        <li><a href="src/ask-us-anything">Ask us Anything</a></li>
-      </ul>
-    </nav>
+    <h1 class="font-display text-md text-finch-peach">Templates</h1>
+    <div x-ref="demo" class="flex items-start overflow-y-scroll">
+      <div x-data="{ isOpen: true }" class="p-sm">
+        <label class="">
+          <p class="font-display text-finch-peach underline text-sm">
+            Shared
+          </p>
+        </label>
+        <details :open="isOpen" class="flex mt-4">
+          <summary>Templates</summary>
+          <ul class="font-display underline">
+            <li><a href="src/shared/navbar">Navbar</a></li>
+            <li><a href="src/shared/footer">Footer</a></li>
+            <li><a href="src/shared/feedback">Feedback</a></li>
+          </ul>
+        </details>
+      </div>
+      <div x-data="{ isOpen: false }" class="p-sm">
+        <label class="">
+          <p class="font-display text-finch-peach underline text-sm">
+            <a href="src/home">Homepage</a>
+          </p>
+        </label>
+        <details :open="isOpen" class="flex mt-4">
+          <summary>Templates</summary>
+          <ul class="font-display underline">
+            <li><a href="src/home/home-splash">Home Splash</a></li>
+            <li><a href="src/home/read-the-latest">Read the latest</a></li>
+            <li><a href="src/home/support-logos">Support Logos</a></li>
+            <li><a href="src/home/as-seen-in">As Seen In</a></li>
+            <li><a href="src/home/wise-guides">Wise Guides</a></li>
+            <li><a href="src/home/science-backed">Science Backed</a></li>
+            <li><a href="src/home/choose-wisely">Choose Wisely</a></li>
+            <li><a href="src/home/how-we-rate">How we rate</a></li>
+            <li><a href="src/home/ask-us-anything">Ask us Anything</a></li>
+          </ul>
+        </details>
+      </div>
+    </div>
 
     <hr class="my-6" />
 
-    <h2 class="font-display text-md text-finch-red">All Styles</h2>
+    <h2 class="font-display text-md text-finch-peach">All Styles</h2>
     <h1>Heading 1</h1>
     <h2>Heading 2 (pb-5)</h2>
     <h3>Heading 3 (pb-sm)</h3>

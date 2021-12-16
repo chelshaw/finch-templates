@@ -9,7 +9,7 @@ const em = (px, base) => `${round(px / base)}em`
 
 module.exports = {
   // For templates only
-  content: ['./src/**/*.{html,js}', './index.html'], // remove index for prod
+  content: ['/src/**/*.{html}', './index.html'], // remove index for prod
 
   theme: {
     // spacing: {
