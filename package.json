@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "description": "Templates for Finch website",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "style": "tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch",
-    "dev": "http-server"
+    "dev": "http-server src"
   },
   "author": "Chelsea Shaw <chelshaw.dev+finch@gmail.com>",
   "devDependencies": {

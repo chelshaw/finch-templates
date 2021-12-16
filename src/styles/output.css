@@ -423,7 +423,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.border, .border-t-2, .border-b {
+.border, .border-t-2, .border-b, .border-t {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
@@ -653,6 +653,22 @@ img {
   flex-basis: 66.666667%;
 }
 
+.basis-3\/5 {
+  flex-basis: 60%;
+}
+
+.basis-2\/5 {
+  flex-basis: 40%;
+}
+
+.basis-7\/12 {
+  flex-basis: 58.333333%;
+}
+
+.basis-5\/12 {
+  flex-basis: 41.666667%;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -677,6 +693,10 @@ img {
   align-items: flex-start;
 }
 
+.items-end {
+  align-items: flex-end;
+}
+
 .items-center {
   align-items: center;
 }
@@ -695,6 +715,10 @@ img {
 
 .gap-4 {
   gap: 1rem;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .overflow-hidden {
@@ -729,9 +753,18 @@ img {
   border-bottom-width: 1px;
 }
 
+.border-t {
+  border-top-width: 1px;
+}
+
 .border-finch-peach {
   --tw-border-opacity: 1;
   border-color: rgb(236 125 96 / var(--tw-border-opacity));
+}
+
+.border-finch-forest {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 59 43 / var(--tw-border-opacity));
 }
 
 .bg-pink-400 {
@@ -868,6 +901,10 @@ img {
   padding: 6rem;
 }
 
+.p-md {
+  padding: 3rem;
+}
+
 .px-7 {
   padding-left: 1.75rem;
   padding-right: 1.75rem;
@@ -982,6 +1019,10 @@ img {
   padding-top: 3rem;
 }
 
+.pr-lg {
+  padding-right: 6rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1052,6 +1093,10 @@ img {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .tracking-wider {
@@ -1208,6 +1253,14 @@ img {
     flex-basis: 33.333333%;
   }
 
+  .md\:basis-1\/2 {
+    flex-basis: 50%;
+  }
+
+  .md\:basis-2\/3 {
+    flex-basis: 66.666667%;
+  }
+
   .md\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
@@ -1234,6 +1287,19 @@ img {
     padding-left: 0px;
     padding-right: 0px;
   }
+
+  .md\:py-md {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .md\:pr-lg {
+    padding-right: 6rem;
+  }
+
+  .md\:pr-md {
+    padding-right: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1253,12 +1319,38 @@ img {
     flex-basis: 16.666667%;
   }
 
+  .lg\:basis-2\/3 {
+    flex-basis: 66.666667%;
+  }
+
   .lg\:flex-nowrap {
     flex-wrap: nowrap;
   }
 
+  .lg\:items-end {
+    align-items: flex-end;
+  }
+
+  .lg\:p-lg {
+    padding: 6rem;
+  }
+
   .lg\:px-lg {
     padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .lg\:py-lg {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .lg\:py-md {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .lg\:pr-lg {
     padding-right: 6rem;
   }
 }
