@@ -17,7 +17,193 @@
     ></script>
   </head>
   <body class="static font-serif">
-    <!-- BEGIN SECTION -->
+    <!-- For example only -->
+
+    <header class="py-8 px-lg absolute inset-x-0 top-0">
+      <div class="flex justify-between max-w-page mx-auto text-white">
+        <h1 id="finch-logo">
+          <a href="/">
+            <span>finch</span>
+          </a>
+        </h1>
+        <nav role="navigation" class="flex items-center">
+          <button id="toggle" aria-expanded="false" class="hidden">Menu</button>
+          <ul
+            id="menu"
+            class="flex font-sans"
+            x-data="{links: [
+            {
+            href: '/how-we-rate',
+            title: 'How We Rate',
+            },
+            {
+            href: '/wise-guides',
+            title: 'Wise Guides',
+            },
+            {
+            href: '/about-us',
+            title: 'About Us',
+            },
+            {
+            href: '/blog',
+            title: 'Blog',
+            },
+            ]}"
+          >
+            <!-- TODO: Dropdown for Wise Guides -->
+            <!-- TODO: Mobile/Responsiveness -->
+            <template x-for="link in links">
+              <li class="px-3">
+                <a x-bind:href="link.href" x-text="link.title"></a>
+              </li>
+            </template>
+            <li class="px-3">
+              <a href="/search" aria-valuetext="Search">🔎</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="bg-finch-blue text-white pt-first">
+      <div class="max-w-2xl mx-auto p-lg text-center">
+        <h2 class="text-finch-forest pb-sm">Wise Guides</h2>
+        <p class="font-display uppercase text-sm tracking-widest py-sm">
+          Find the best of the best
+        </p>
+        <p class="text-p">
+          Check out our Wise Guides for the reliably simple and efficient intel
+          you need to make informed choices when shopping. We believe that
+          understanding the science of sustainability gives control back to you
+          as a citizen, not just as a consumer.
+        </p>
+      </div>
+    </section>
+
+    <main
+      class="px-md"
+      x-data="{categories: [
+        {
+          name: 'Baby',
+          products: [
+            {
+              name: 'Baby wipes',
+              key: 'baby-wipes'
+            },
+            {
+              name: 'Diapers',
+              key: 'diapers'
+            }
+          ]
+        },
+        {
+          name: 'Bathroom',
+          products: [
+            {
+              name: 'Bath towels',
+              key: 'bath-towels'
+            }
+          ]
+        },
+        {
+          name: 'Bedroom',
+          products: [
+            {
+              name: 'Duvet inserts',
+              key: 'duvet-inserts'
+            }
+          ]
+        },
+        {
+          name: 'Laundry',
+          products: [
+            {
+              name: 'Laundry detergent',
+              key: 'laundry-detergent'
+            }
+          ]
+        },
+        {
+          name: 'Kitchen',
+          products: [
+            {
+              name: 'Dish soap',
+              key: 'dish-soap'
+            }
+          ]
+        },
+        {
+          name: 'Personal care',
+          products: [
+            {
+              name: 'Dental floss',
+              key: 'dental-floss'
+            },
+            {
+              name: 'Shampoo & Conditioner',
+              key: 'shampoo-conditioner'
+            },
+            {
+              name: 'Shampoo & Conditioner',
+              key: 'shampoo-conditioner'
+            },
+            {
+              name: 'Shampoo & Conditioner',
+              key: 'shampoo-conditioner'
+            },
+            {
+              name: 'Shampoo & Conditioner',
+              key: 'shampoo-conditioner'
+            },
+            {
+              name: 'Shampoo & Conditioner',
+              key: 'shampoo-conditioner'
+            },
+          ]
+        },
+      ]}"
+    >
+      <template x-for="category in categories">
+        <section class="max-w-4xl mx-auto">
+          <h3
+            class="font-display text-sm uppercase tracking-wider py-md border-b border-finch-peach"
+            x-text="category.name"
+          ></h3>
+          <ul class="grid grid-cols-4 gap-4 text-center py-md items-center">
+            <template x-for="product in category.products">
+              <li class="py-sm">
+                <a x-bind:href="'/wise-guides/' + product.key">
+                  <img
+                    x-bind:src="'/assets/wise-guides/' + product.key + '.png'"
+                    alt=""
+                  />
+                  <h4
+                    class="font-heading text-lg text-finch-peach"
+                    x-text="product.name"
+                  ></h4>
+                </a>
+              </li>
+            </template>
+          </ul>
+        </section>
+      </template>
+      <section class="py-lg max-w-sm mx-auto text-center">
+        <p class="font-heading text-xl text-finch-forest">
+          Is there a specific product or category you want our thoughts on?
+        </p>
+        <p class="font-display text-sm uppercase tracking-widest pt-md">
+          Please shoot us a note at:
+          <br />
+          <a
+            class="text-finch-peach underline underline-offset-4"
+            x-bind:href="'mailto:hey@choosefinch.com'"
+          >
+            hey@choosefinch.com
+          </a>
+        </p>
+      </section>
+    </main>
+
     <svg style="display: none;">
       <defs>
         <symbol id="instagram" viewBox="0 0 64 64">
@@ -183,6 +369,5 @@
         </div>
       </div>
     </footer>
-    <!-- END SECTION -->
   </body>
 </html>
