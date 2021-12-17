@@ -53,6 +53,7 @@ module.exports = {
         'faq-section': 'url("/assets/faq-pattern-finch.png")',
         'our-team': 'url("/assets/our-team-pattern-finch.png")',
         blog: 'url("/assets/blog-pattern-finch.png")',
+        'blog-heading': 'url("/assets/blog-header-pattern-finch.png")',
       },
       maxWidth: { page: '1440px' },
       animation: {

@@ -62,12 +62,17 @@
       >
         <template x-for="blog in blogs">
           <div class="basis-1/3 p-sm">
-            <img x-bind:src="blog.imageUrl" aria-hidden="true" class="mb-2" />
-            <span
+            <a x-bind:href="'/blog' + blog.slug">
+              <img x-bind:src="blog.imageUrl" aria-hidden="true" class="mb-2" />
+            </a>
+            <a
+              x-bind:href="'/blog/category' + blog.category"
               x-text="blog.category"
               class="font-display text-finch-blue uppercase tracking-wider text-xs"
-            ></span>
-            <p x-text="blog.title" class="font-heading text-md"></p>
+            ></a>
+            <a x-bind:href="'/blog' + blog.slug" class="hover:cursor-pointer">
+              <p x-text="blog.title" class="font-heading text-md"></p>
+            </a>
           </div>
         </template>
       </ul>
