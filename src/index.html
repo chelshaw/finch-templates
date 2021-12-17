@@ -17,6 +17,9 @@
     ></script>
   </head>
   <body class="static font-serif">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd" />
+    </svg>
     <h1 class="font-display text-md text-finch-peach">Templates</h1>
     <div x-ref="demo" class="flex items-start overflow-y-scroll">
       <div x-data="{ isOpen: true }" class="p-sm">
@@ -58,7 +61,7 @@
       <div x-data="{ isOpen: false }" class="p-sm">
         <label class="">
           <p class="font-display text-finch-peach underline text-sm">
-            <a href="how-we-rate">How We Rate</a>
+            <a href="how-we-rate">☑️ How We Rate</a>
           </p>
         </label>
         <details :open="isOpen" class="flex mt-4">
@@ -86,7 +89,7 @@
       <div x-data="{ isOpen: false }" class="p-sm">
         <label class="">
           <p class="font-display text-finch-peach underline text-sm">
-            <a href="/wise-guides">Wise Guides</a>
+            <a href="/wise-guides">✅ Wise Guides</a>
           </p>
         </label>
         <details :open="isOpen" class="flex mt-4">
@@ -100,7 +103,7 @@
       <div x-data="{ isOpen: false }" class="p-sm">
         <label class="">
           <p class="font-display text-finch-peach underline text-sm">
-            <a href="/about-us">About Us</a>
+            <a href="/about-us">✅ About Us</a>
           </p>
         </label>
         <details :open="isOpen" class="flex mt-4">
@@ -119,7 +122,24 @@
           </ul>
         </details>
       </div>
+      <div x-data="{ isOpen: false }" class="p-sm">
+        <label class="">
+          <p class="font-display text-finch-peach text-sm">
+            Other pages
+          </p>
+        </label>
+        <ul class="font-display underline">
+          <li><a href="/faqs">FAQs </a></li>
+          <li><a href="/for-brands">For Brands</a></li>
+          <li><a href="/waitlist">Waitlist</a></li>
+          <li><a href="/join">Join</a></li>
+          <li><a href="/contact-us">Contact Us</a></li>
+          <li><a href="/terms-of-use-privacy-policy">Terms of use/privacy</a></li>
+          <li><a href="/faqs/splash">Splash</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
 
     <hr class="my-6" />
 

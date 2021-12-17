@@ -573,6 +573,10 @@ img {
   height: 1.5rem;
 }
 
+.h-5 {
+  height: 1.25rem;
+}
+
 .max-h-\[600\] {
   max-height: 600;
 }
@@ -591,6 +595,10 @@ img {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .max-w-6xl {
@@ -881,8 +889,24 @@ img {
   background-size: cover;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-center {
   background-position: center;
+}
+
+.bg-right {
+  background-position: right;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
 }
 
 .fill-black {
@@ -1301,6 +1325,10 @@ img {
 
   .md\:flex-nowrap {
     flex-wrap: nowrap;
+  }
+
+  .md\:bg-faq-section {
+    background-image: url("/assets/faq-pattern-finch.png");
   }
 
   .md\:p-lg {
